@@ -1,118 +1,31 @@
-
-// style the background color of the tree view
-.tree-view {
-  // background-color: whitesmoke;
-}
-// style the background and foreground colors on the atom-text-editor-element itself
-atom-text-editor {
-  // color: white;
-  // background-color: hsl(180, 24%, 12%);
-}
-
-.select-list.popover-list {
-  box-shadow: none;
-}
-// .select-list ol.list-group li.selected, .select-list ol.list-group li.selected {
-//   background-color: #333;
-// }
-
-// .tree-view-scroller {
-//   background-color: #333;
-// }
-.tree-view-scroller .entries .list-tree:before {
-  content:none;
-}
-// .selection .region { background-color: #fff!important;}
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed and saved.
+ *
+ * Add your own CSS or Less to fully customize Atom.
+ * If you are unfamiliar with Less, you can read more about it here:
+ * http://lesscss.org
+ */
 
 
+/*
+ * Examples
+ * (To see them, uncomment and save)
+ */
 
+@color-primary: #009688;
+@color-modified: #C7AF3F;
+@color-added: #9caf88;
 
 .turan-modify-ui {
-  .syntax--comment {
-    background-color: transparent;
-  }
-  .tree-view {
-    // background-color: #383838;
-  }
-  .list-group li:not(.list-nested-item).status-modified, .list-tree li:not(.list-nested-item).status-modified, .list-group li.list-nested-item.status-modified > .list-item, .list-tree li.list-nested-item.status-modified > .list-item {
-    // color: #b8bb26;
-  }
-  .list-group li:not(.list-nested-item), .list-tree li:not(.list-nested-item), .list-group li.list-nested-item > .list-item, .list-tree li.list-nested-item > .list-item {
-    line-height: 23px;
-    font-size: 11px;
-    // color: #b3a688;
-  }
-  .tool-panel {
-    // background-color: #444;
-    .btn {
-      background-color: #666;
-      color: #eee;
-      &:hover {
-        background-color: #777;
-      }
-    }
-  }
-  .tab-bar {
-    .tab {
-      // padding-left:6px;
-      // padding-right: 24px;
-      // color: #ccbe9b;
-      &.active {
-        color: #fff;
-      }
-    }
-  }
-  atom-text-editor[mini] {
-    // padding:5px;
-    font-size: 12px;
-    font-weight: 300;
-    // max-height: 24px;
-  }
-  atom-panel.modal {
-    top: 100px;
-    padding-top: 20px;
-    // position: absolute;
-    // top: 50%;
-    // transform: perspective(1px) translateY(-50%);
-    .text-smaller {
-      padding: 2px 20px 10px 20px;
-    }
-    atom-text-editor[mini] {
-      color: #009688!important;
-    }
-    .list-group {
-      li {
-        padding-top: 10px!important;
-        padding-bottom: 10px!important;
-        .primary-line {
-          font-size: 14px;
-        }
-      }
-    }
-    atom-text-editor[mini] {
-      // padding:5px;
-      font-size: 16px;
-      font-weight: 600;
-      // max-height: 24px;
-    }
-  }
-  .find-and-replace {
-    padding-bottom: 0;
-  }
-  .find-and-replace .input-block-item, .project-find .input-block-item {
-    // padding: 3px;
-  }
-  // autocomplete-suggestion-list.select-list.popover-list .suggestion-description-content {
-  //   font-size: 11px;
-  //   color: #888;
-  // }
+  -webkit-font-smoothing: subpixel-antialised;
+
   .editor {
     // background-color: #292929;
-    line-height: 1.5;
-    -webkit-font-smoothing: auto!important;
-  }
-  atom-text-editor.editor .selection .region {
-    background-color: #606060!important;
+    line-height: 1.5em;
+    -webkit-font-smoothing: subpixel-antialised;
   }
   atom-text-editor.editor .gutter {
     // background-color: #292929;
@@ -130,27 +43,140 @@ atom-text-editor {
       }
     }
   }
-  // Fuzzy finder
-  .fuzzy-finder {
-    // width: 684px;
-    .list-group .character-match {
-      font-weight: normal;
-      color: #eee;
+
+  .tool-panel {
+    // background-color: #444;
+    .btn {
+      color: rgba(255,255,255,0.7);
+      background-color: rgba(255,255,255,0.1);
+      &:hover {
+        background-color: rgba(255,255,255,0.15);
+      }
     }
   }
-  .select-list ol.list-group li, .select-list ol.list-group li {
-    // padding: 2px 5px;
-    margin-bottom: 2px;
+
+
+  /* TAB BAR */
+  .tab-bar {
+    font-size: 12px;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    .tab {
+      font-weight: 600;
+      color: rgba(255,255,255,0.4);
+      &.active {
+        color: #fff;
+      }
+    }
   }
-  // .select-list ol.list-group li.selected, .select-list ol.list-group li.selected {
-  //   background-color: #555;
-  //   padding: 2px 5px;
-  //   margin-bottom: 2px;
-  // }
-  // .select-list ol.list-group li .primary-line {
-  //   font-size: 1.1em;
-  //   text-shadow: none;
-  // }
+
+  .panel-bottom {
+    .find-and-replace .input-block-item, .project-find .input-block-item {
+      padding: 3px;
+    }
+    atom-text-editor[mini] {
+      line-height: 24px;
+    }
+  }
+
+  atom-dock {
+    .tab-bar {
+      display: none;
+    }
+  }
+
+  .list-group .icon::before, .list-tree .icon::before {
+    margin-right: 0.4em;
+  }
+  .list-group .no-icon, .list-tree .no-icon {
+    padding-left: 24px;
+  }
+
+  /* TREE VIEW */
+  .tree-view {
+    padding-top: 1.5em;
+    font-size: 1em;
+    .list-tree.has-collapsable-children .list-nested-item > .list-item::before {
+      margin-right: 8px;
+    }
+    .list-tree.has-collapsable-children .list-nested-item > .list-tree > li, .list-tree.has-collapsable-children .list-nested-item > .list-group > li {
+      padding-left: 22px;
+    }
+    .list-tree.has-collapsable-children li.list-item {
+      margin-left: 0;
+    }
+  }
+  .list-group li:not(.list-nested-item).status-added, .list-tree li:not(.list-nested-item).status-added, .list-group li.list-nested-item.status-added > .list-item, .list-tree li.list-nested-item.status-added > .list-item {
+    color: @color-added;
+  }
+
+  .list-group li:not(.list-nested-item).status-modified, .list-tree li:not(.list-nested-item).status-modified, .list-group li.list-nested-item.status-modified > .list-item, .list-tree li.list-nested-item.status-modified > .list-item {
+    color: @color-modified;
+  }
+
+  .list-group li:not(.list-nested-item), .list-tree li:not(.list-nested-item), .list-group li.list-nested-item > .list-item, .list-tree li.list-nested-item > .list-item {
+    line-height: 23px;
+    font-size: 11px;
+  }
+  .list-group .selected::before, .list-tree .selected::before {
+    height: 23px;
+  }
+
+
+  /* STATUS BAR */
+  .status-bar {
+    font-weight: 300;
+  }
+
+  /* MODAL */
+
+  atom-panel.modal {
+    top: 100px;
+    padding-top: 20px;
+    .text-smaller {
+      padding: 2px 20px 10px 20px;
+    }
+    atom-text-editor[mini] {
+      color: @color-primary;
+    }
+    .list-group {
+      -webkit-font-smoothing: antialiased;
+      font-weight: 400;
+      li {
+        padding-top: 10px!important;
+        padding-bottom: 10px!important;
+        .primary-line {
+          font-size: 14px;
+        }
+        .secondary-line {
+          font-size: 12px;
+        }
+        &.selected {
+          .character-match {
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .list-group li:not(.list-nested-item), .list-tree li:not(.list-nested-item), .list-group li.list-nested-item > .list-item, .list-tree li.list-nested-item > .list-item {
+      font-weight: 600;
+    }
+    atom-text-editor[mini] {
+      // padding:5px;
+      line-height: 58px;
+      font-size: 22px;
+      font-weight: 600;
+      // max-height: 24px;
+    }
+  }
+
+
+
+
+
+
+
 
   atom-notification.has-close .content > div {
     padding-right: 0;
