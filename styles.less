@@ -1,0 +1,574 @@
+
+// style the background color of the tree view
+.tree-view {
+  // background-color: whitesmoke;
+}
+// style the background and foreground colors on the atom-text-editor-element itself
+atom-text-editor {
+  // color: white;
+  // background-color: hsl(180, 24%, 12%);
+}
+
+.select-list.popover-list {
+  box-shadow: none;
+}
+// .select-list ol.list-group li.selected, .select-list ol.list-group li.selected {
+//   background-color: #333;
+// }
+
+// .tree-view-scroller {
+//   background-color: #333;
+// }
+.tree-view-scroller .entries .list-tree:before {
+  content:none;
+}
+// .selection .region { background-color: #fff!important;}
+
+
+
+
+.turan-modify-ui {
+  .syntax--comment {
+    background-color: transparent;
+  }
+  .tree-view {
+    // background-color: #383838;
+  }
+  .list-group li:not(.list-nested-item).status-modified, .list-tree li:not(.list-nested-item).status-modified, .list-group li.list-nested-item.status-modified > .list-item, .list-tree li.list-nested-item.status-modified > .list-item {
+    // color: #b8bb26;
+  }
+  .list-group li:not(.list-nested-item), .list-tree li:not(.list-nested-item), .list-group li.list-nested-item > .list-item, .list-tree li.list-nested-item > .list-item {
+    line-height: 23px;
+    font-size: 11px;
+    // color: #b3a688;
+  }
+  .tool-panel {
+    // background-color: #444;
+    .btn {
+      background-color: #666;
+      color: #eee;
+      &:hover {
+        background-color: #777;
+      }
+    }
+  }
+  .tab-bar {
+    .tab {
+      // padding-left:6px;
+      // padding-right: 24px;
+      // color: #ccbe9b;
+      &.active {
+        color: #fff;
+      }
+    }
+  }
+  atom-text-editor[mini] {
+    // padding:5px;
+    font-size: 12px;
+    font-weight: 300;
+    // max-height: 24px;
+  }
+  atom-panel.modal {
+    top: 100px;
+    padding-top: 20px;
+    // position: absolute;
+    // top: 50%;
+    // transform: perspective(1px) translateY(-50%);
+    .text-smaller {
+      padding: 2px 20px 10px 20px;
+    }
+    atom-text-editor[mini] {
+      color: #009688!important;
+    }
+    .list-group {
+      li {
+        padding-top: 10px!important;
+        padding-bottom: 10px!important;
+        .primary-line {
+          font-size: 14px;
+        }
+      }
+    }
+    atom-text-editor[mini] {
+      // padding:5px;
+      font-size: 16px;
+      font-weight: 600;
+      // max-height: 24px;
+    }
+  }
+  .find-and-replace {
+    padding-bottom: 0;
+  }
+  .find-and-replace .input-block-item, .project-find .input-block-item {
+    // padding: 3px;
+  }
+  // autocomplete-suggestion-list.select-list.popover-list .suggestion-description-content {
+  //   font-size: 11px;
+  //   color: #888;
+  // }
+  .editor {
+    // background-color: #292929;
+    line-height: 1.5;
+    -webkit-font-smoothing: auto!important;
+  }
+  atom-text-editor.editor .selection .region {
+    background-color: #606060!important;
+  }
+  atom-text-editor.editor .gutter {
+    // background-color: #292929;
+    background-color: #232729;
+  }
+  atom-text-editor.editor .gutter {
+    padding-right: 0;
+    margin-right: 0;
+    .line-numbers {
+      padding-right: 0;
+      margin-right: 0;
+      .line-number {
+        padding-right: 0;
+        margin-right: 0;
+      }
+    }
+  }
+  // Fuzzy finder
+  .fuzzy-finder {
+    // width: 684px;
+    .list-group .character-match {
+      font-weight: normal;
+      color: #eee;
+    }
+  }
+  .select-list ol.list-group li, .select-list ol.list-group li {
+    // padding: 2px 5px;
+    margin-bottom: 2px;
+  }
+  // .select-list ol.list-group li.selected, .select-list ol.list-group li.selected {
+  //   background-color: #555;
+  //   padding: 2px 5px;
+  //   margin-bottom: 2px;
+  // }
+  // .select-list ol.list-group li .primary-line {
+  //   font-size: 1.1em;
+  //   text-shadow: none;
+  // }
+
+  atom-notification.has-close .content > div {
+    padding-right: 0;
+  }
+  atom-notification.has-close:only-child .content > div {
+    padding-right: 0;
+  }
+  atom-notification.has-close:first-child:not(:only-child) .content > div {
+    padding-right: 0;
+  }
+
+  atom-notifications {
+    display: block;
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    font-size: 0.9em;
+    overflow-x: hidden;
+    overflow-y: auto;
+    pointer-events: none;
+  }
+  atom-notifications::-webkit-scrollbar {
+    display: none;
+  }
+  atom-notifications atom-notification .close-all {
+    display: none;
+  }
+  atom-notifications atom-notification:first-child .close-all {
+    display: block;
+  }
+  atom-notifications atom-notification:first-child.has-close .message {
+    padding-right: 115px;
+  }
+  atom-notifications atom-notification:only-child .close-all {
+    display: none;
+  }
+  atom-notifications atom-notification:only-child.has-close .message {
+    padding-right: 34px;
+  }
+  atom-notification {
+    float: right;
+    clear: right;
+    position: relative;
+    width: 450px;
+    // padding-left: 30px;
+    margin-bottom: 2px;
+    max-height: 800px;
+    word-wrap: break-word;
+    pointer-events: auto;
+    .content > div {
+      line-height: 1.4em;
+    }
+  }
+  atom-notification.icon:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    padding-top: 10px;
+    text-align: center;
+    border-radius: 0px 0 0 0px;
+  }
+  atom-notification:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 2px;
+  }
+  atom-notification .meta,
+  atom-notification .close,
+  atom-notification .detail,
+  atom-notification .stack-toggle,
+  atom-notification .stack-container {
+    display: none;
+  }
+  atom-notification.fatal .meta,
+  atom-notification.has-description .meta,
+  atom-notification.has-buttons .meta,
+  atom-notification.has-close .close,
+  atom-notification.has-detail .detail,
+  atom-notification.has-stack .stack-toggle,
+  atom-notification.has-stack .stack-container {
+    display: block;
+  }
+  atom-notification .content .message + .detail {
+    padding-top: 1em;
+  }
+  atom-notification .item {
+    padding: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  atom-notification .item.message {
+    border-top: none;
+  }
+  atom-notification .item.message p:last-child {
+    margin-bottom: 0;
+  }
+  atom-notification.has-close .message {
+    padding-right: 34px;
+  }
+  atom-notification .content {
+    border-radius: 0 0px 0px 0;
+  }
+  atom-notification .message {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  atom-notification .close-all.btn {
+    position: absolute;
+    top: 7px;
+    right: 38px;
+    background: none;
+  }
+  atom-notification .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    font-size: 16px;
+    text-shadow: none;
+    color: black;
+    opacity: .4;
+  }
+  atom-notification .close:hover,
+  atom-notification .close:focus {
+    opacity: 1;
+  }
+  atom-notification .close:active {
+    opacity: .2;
+  }
+  atom-notification .close:before {
+    margin: 0;
+  }
+  atom-notification.has-detail {
+    width: 450px;
+  }
+  atom-notification .detail {
+    font-size: .8em;
+    background-color: rgba(255, 255, 255, 0.3);
+    background-clip: padding-box;
+    max-height: 500px;
+    overflow-y: auto;
+  }
+  atom-notification .detail .line {
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  }
+  atom-notification .detail .stack-toggle {
+    margin-top: 10px;
+  }
+  atom-notification .detail .stack-toggle .icon:before {
+    margin: 0;
+  }
+  atom-notification .detail .detail-content .line {
+    white-space: pre-wrap;
+  }
+  atom-notification .detail .stack-container {
+    margin-top: 10px;
+  }
+  atom-notification .detail .stack-container .line {
+    white-space: pre;
+  }
+  atom-notification .description {
+    font-size: .8em;
+  }
+  atom-notification .description p:last-child {
+    margin-bottom: 0;
+  }
+  atom-notification .btn-toolbar {
+    margin-top: 10px;
+  }
+  atom-notification .btn-copy-report {
+    vertical-align: middle;
+  }
+  atom-notification.fatal .content {
+    color: #190806;
+    background-color: #e48f86;
+  }
+  atom-notification.fatal a {
+    color: #6d2018;
+  }
+  atom-notification.fatal code {
+    color: #190806;
+    background-color: #d9786e;
+  }
+  atom-notification.fatal.icon:before {
+    color: #eebab4;
+    background-color: #c0392b;
+  }
+  atom-notification.fatal .close-all.btn {
+    border: 1px solid rgba(25, 8, 6, 0.3);
+    color: rgba(25, 8, 6, 0.6);
+    text-shadow: none;
+  }
+  atom-notification.fatal .close-all.btn:hover {
+    background: none;
+    border-color: rgba(25, 8, 6, 0.8);
+    color: #190806;
+  }
+  atom-notification.error .content {
+    color: #190806;
+    background-color: #e48f86;
+  }
+  atom-notification.error a {
+    color: #6d2018;
+  }
+  atom-notification.error code {
+    color: #190806;
+    background-color: #d9786e;
+  }
+  atom-notification.error.icon:before {
+    color: #eebab4;
+    background-color: #c0392b;
+  }
+  atom-notification.error .close-all.btn {
+    border: 1px solid rgba(25, 8, 6, 0.3);
+    color: rgba(25, 8, 6, 0.6);
+    text-shadow: none;
+  }
+  atom-notification.error .close-all.btn:hover {
+    background: none;
+    border-color: rgba(25, 8, 6, 0.8);
+    color: #190806;
+  }
+  atom-notification.warning .content {
+    color: #312803;
+    background-color: #f8e287;
+  }
+  atom-notification.warning a {
+    color: #927608;
+  }
+  atom-notification.warning code {
+    color: #312803;
+    background-color: #f2d76a;
+  }
+  atom-notification.warning.icon:before {
+    color: #fbefbc;
+    background-color: #f1c40f;
+  }
+  atom-notification.warning .close-all.btn {
+    border: 1px solid rgba(49, 40, 3, 0.3);
+    color: rgba(49, 40, 3, 0.6);
+    text-shadow: none;
+  }
+  atom-notification.warning .close-all.btn:hover {
+    background: none;
+    border-color: rgba(49, 40, 3, 0.8);
+    color: #312803;
+  }
+  atom-notification.info .content {
+    color: #4b1008;
+    background-color: #f6b2a8;
+  }
+  atom-notification.info a {
+    color: #a82411;
+  }
+  atom-notification.info code {
+    color: #4b1008;
+    background-color: #ef988b;
+  }
+  atom-notification.info.icon:before {
+    color: #fbdfdb;
+    background-color: #ea4b35;
+  }
+  atom-notification.info .close-all.btn {
+    border: 1px solid rgba(75, 16, 8, 0.3);
+    color: rgba(75, 16, 8, 0.6);
+    text-shadow: none;
+  }
+  atom-notification.info .close-all.btn:hover {
+    background: none;
+    border-color: rgba(75, 16, 8, 0.8);
+    color: #4b1008;
+  }
+  atom-notification.success .content {
+    color: #082615;
+    background-color: #93e7b6;
+  }
+  atom-notification.success a {
+    color: #1b7943;
+  }
+  atom-notification.success code {
+    color: #082615;
+    background-color: #7adca3;
+  }
+  atom-notification.success.icon:before {
+    color: #c1f1d5;
+    background-color: #2ecc71;
+  }
+  atom-notification.success .close-all.btn {
+    border: 1px solid rgba(8, 38, 21, 0.3);
+    color: rgba(8, 38, 21, 0.6);
+    text-shadow: none;
+  }
+  atom-notification.success .close-all.btn:hover {
+    background: none;
+    border-color: rgba(8, 38, 21, 0.8);
+    color: #082615;
+  }
+  atom-notification {
+    -webkit-animation: notification-show 0.16s cubic-bezier(0.175, 0.885, 0.32, 1.27499);
+  }
+  atom-notification[type="fatal"] {
+    -webkit-animation: notification-show 0.16s cubic-bezier(0.175, 0.885, 0.32, 1.27499), notification-shake 4s 2s;
+    -webkit-animation-iteration-count: 1, 3;
+  }
+  atom-notification[type="fatal"]:hover {
+    -webkit-animation-play-state: paused;
+  }
+  atom-notification.remove,
+  atom-notification.remove:hover {
+    -webkit-animation: notification-hide 0.12s cubic-bezier(0.34, 0.07, 1, 0.2), notification-shrink 0.24s 0.12s cubic-bezier(0.5, 0, 0, 1);
+    -webkit-animation-fill-mode: forwards;
+  }
+  @-webkit-keyframes notification-show {
+    0% {
+      opacity: 0;
+      transform: perspective(450px) translate(0, -30px) rotateX(90deg);
+    }
+    100% {
+      opacity: 1;
+      transform: perspective(450px) translate(0, 0) rotateX(0deg);
+    }
+  }
+  @-webkit-keyframes notification-hide {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+  }
+  @-webkit-keyframes notification-shrink {
+    0% {
+      opacity: 0;
+      max-height: 800px;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 0;
+      max-height: 0;
+      transform: scale(0.8);
+    }
+  }
+  @-webkit-keyframes notification-shake {
+    0% {
+      transform: translateX(0);
+    }
+    2% {
+      transform: translateX(-4px);
+    }
+    4% {
+      transform: translateX(8px);
+    }
+    6% {
+      transform: translateX(-4px);
+    }
+    8% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  linter-message {
+    font-size: 0.7rem;
+    line-height: 1.4rem;
+    .badge {
+      line-height: 1rem;
+    }
+  }
+  .find-and-replace .header, .project-find .header {
+    font-size: 0.7rem;
+  }
+  .find-and-replace .input-block-item, .project-find .input-block-item {
+    padding: 0;
+  }
+
+  .tokamak-terminal.terminal-view .standard, .terminal-plus.terminal-view .standard {
+    background-color: #1c1c1c;
+  }
+  .preview-pane {
+    .results-view {
+      li {
+        font-size: 11px;
+        .path-details {
+          padding: 6px 0;
+          color: #009688;
+          font-size: 12px;
+        }
+      }
+    }
+    .panel-heading {
+      background-color: transparent;
+      .preview-count {
+        color: #aeaeae;
+        .highlight-info {
+          color: white;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+.markdown-preview.markdown-preview {
+  font-family: Arial;
+  font-size: 0.9em;
+}
